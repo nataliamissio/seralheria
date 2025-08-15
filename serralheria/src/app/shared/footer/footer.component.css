@@ -1,0 +1,69 @@
+/* Cor dos links igual ao header, visível em todos os estados */
+.nav-link {
+  color: #BDBDBD !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #FFFFFF !important;
+}
+/* Cor dos links igual ao header */
+.nav-link {
+  color: #BDBDBD !important;
+}
+.footer {
+  background-color: #333333; 
+  color: #FFFFFF; /* branco */
+  font-size: 0.95rem;
+}
+
+/* Logo à esquerda, links ao lado */
+/* Footer institucional, discreto */
+.footer-logo {
+  height: 36px;
+  width: auto;
+}
+
+.footer-brand {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #BDBDBD;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-link {
+  color: #BDBDBD !important;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.98rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: #FFFFFF !important;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Links do footer sempre visíveis em cinza claro */
+.footer-link {
+  color: #BDBDBD !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #FFFFFF !important;
+  text-decoration: underline;
+}
