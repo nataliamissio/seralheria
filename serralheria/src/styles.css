@@ -25,3 +25,8 @@
 html, body {
 	overflow-x: hidden !important;
 }
+
+/* Garante a cor de destaque no titulo da secao de contato da Home */
+#contato .col-lg-6.mb-4 > h6.text-uppercase.fw-bold {
+	color: #F39C12 !important;
+}

@@ -1,10 +1,17 @@
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1050;
+}
 
 /* Espaçamento menor entre os links do menu e sublinhado animado */
 .navbar-nav .nav-link {
   position: relative;
   overflow: hidden;
   margin-right: 0.50rem;
-  color: #BDBDBD !important;
+  color: #A3A3A3 !important;
   cursor: pointer;
 }
 
@@ -16,7 +23,7 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background: #BDBDBD;
+  background: #F39C12;
   transition: width 0.3s cubic-bezier(.4,0,.2,1);
 }
 
@@ -27,14 +34,28 @@
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
+
 .navbar {
   background-color: #212529 !important; /* preto destaque */
 }
 
 .nav-link {
-  color: #BDBDBD !important; /* cinza claro */
+  color: #A3A3A3 !important; /* texto secundario */
 }
 
 .nav-link:hover {
   color: #FFFFFF !important; /* branco no hover */
+}
+
+.btn-header-orcamento {
+  background-color: #F39C12 !important;
+  border-color: #F39C12 !important;
+  color: #FFFFFF !important;
+}
+
+.btn-header-orcamento:hover,
+.btn-header-orcamento:focus {
+  background-color: #D8890D !important;
+  border-color: #D8890D !important;
+  color: #FFFFFF !important;
 }
