@@ -1,6 +1,8 @@
-# 🛠️ Site Serralheria
+# 🛠️ Site D Lima Estruturas Metálicas
 
-Um website desenvolvido para apresentar os serviços, o portfólio e as informações de contato de uma serralheria. O objetivo deste projeto é criar uma interface clara, responsiva e de fácil navegação para os clientes, utilizando uma arquitetura baseada em componentes.
+Website institucional desenvolvido para a **[D Lima Estruturas Metálicas](https://dlimaestruturasmetalicas.com.br/)**, uma empresa com tradição desde 2014 (anteriormente *Ligeirinho Portões*). O objetivo deste projeto é criar uma interface moderna, responsiva e de fácil navegação para apresentar os serviços, o portfólio e facilitar o contato dos clientes com a serralheria.
+
+> **Missão da Empresa:** Garantir qualidade, segurança e inovação em cada projeto, transformando ideias em estruturas duráveis e com design funcional.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -8,11 +10,19 @@ Um website desenvolvido para apresentar os serviços, o portfólio e as informa�
 * **TypeScript:** Linguagem base do projeto, garantindo tipagem estática e maior segurança no desenvolvimento.
 * **HTML5 & CSS3:** Estruturação semântica e estilização dos componentes.
 
-## ⚙️ Funcionalidades
+## ⚙️ Funcionalidades e Escopo
 
-* Apresentação dos serviços oferecidos.
-* Navegação estruturada em componentes (Header e Footer atualmente em desenvolvimento na branch `feat/header&footer`).
-* *(Adicione aqui outras funcionalidades futuras, como galeria de projetos, formulário de contato, etc.)*
+O site foi estruturado para apresentar as seguintes seções e serviços:
+* **Home:** Apresentação inicial e chamada para ação (orçamento).
+* **Serviços:** Detalhamento das soluções oferecidas:
+  * Estruturas Metálicas
+  * Mezaninos
+  * Escadas
+  * Portões Automáticos
+  * Grades e Corrimão
+* **Sobre:** História e valores da D Lima Serralheria.
+* **Galeria:** Exibição do portfólio de trabalhos realizados.
+* **Contato:** Integração com WhatsApp, E-mail e redes sociais.
 
 ## 💻 Como rodar o projeto localmente
 
