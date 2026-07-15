@@ -10,9 +10,11 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
   modalGaleriaSrc: string = '';
+  modalGaleriaAlt: string = 'Imagem de projeto de serralheria da D Lima';
 
-  abrirModalGaleria(src: string) {
+  abrirModalGaleria(src: string, alt: string) {
     this.modalGaleriaSrc = src;
+    this.modalGaleriaAlt = alt;
     // Abre o modal via Bootstrap JS
     const modal = document.getElementById('galeriaModal');
     if (modal) {

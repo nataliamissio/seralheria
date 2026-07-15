@@ -1,3 +1,122 @@
 .titulo-destaque-home {
-	color: #F39C12 !important;
+	color: var(--dl-gold-500) !important;
+}
+
+.home-dark-section {
+	color: var(--dl-white);
+}
+
+.home-dark-section .home-dark-text {
+	color: #D8CFC2 !important;
+}
+
+.home-dark-section .home-dark-muted {
+	color: #D8CFC2 !important;
+}
+
+.home-dark-section .home-dark-divider {
+	border-top-color: rgba(243, 156, 18, 0.45) !important;
+}
+
+.home-dark-title {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: 0.015em;
+}
+
+.home-dark-body {
+	font-size: 1.12rem;
+	line-height: 1.75;
+	font-weight: 400;
+}
+
+.home-dark-lead {
+	display: block;
+	margin-top: 0.25rem;
+	font-size: 1.2rem;
+	line-height: 1.72;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.home-hero-img {
+	width: 100%;
+	max-width: 460px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 18px;
+	border: 1px solid var(--dl-border-light);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.home-hero-copy {
+	max-width: 560px;
+}
+
+#servicos,
+#vantagens,
+#galeria,
+#contato {
+	background-color: var(--dl-white);
+}
+
+#servicos .card,
+#vantagens .card {
+	border-color: var(--dl-border-soft) !important;
+	box-shadow: var(--dl-shadow-soft) !important;
+	border-radius: 14px;
+}
+
+#galeria .galeria-img {
+	border-color: var(--dl-border-soft) !important;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+	transition: box-shadow var(--dl-transition-fast);
+}
+
+#galeria .galeria-img:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-card,
+.benefit-card {
+	transition: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+
+.service-card i.bi,
+.benefit-card i.bi {
+	transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#servicos .service-card:hover i.bi,
+#servicos .service-card:focus-within i.bi,
+#vantagens .benefit-card:hover i.bi,
+#vantagens .benefit-card:focus-within i.bi {
+	color: #ff6a00 !important;
+	transform: none;
+}
+
+@media (max-width: 767.98px) {
+	.home-hero-img {
+		width: 92%;
+		max-width: 320px;
+		height: auto;
+		object-fit: contain;
+		margin-inline: auto;
+	}
+
+	.home-dark-title {
+		font-size: 1.7rem;
+	}
+
+	.home-dark-body {
+		font-size: 1.02rem;
+		line-height: 1.7;
+	}
+
+	.home-dark-lead {
+		font-size: 1.08rem;
+	}
 }
