@@ -1,22 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-header">
   <div class="container">
     <a class="navbar-brand" routerLink="/">
-      <img src="assets/img/logo.svg" alt="DLima Estruturas Metálicas" class="img-fluid rounded d-inline-block align-text-top" style="width: 250px; object-fit: cover;">
+      <img src="assets/img/logo.svg" alt="Logotipo da D Lima Estruturas Metálicas" class="img-fluid rounded d-inline-block align-text-top" style="width: 250px; object-fit: cover;">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link text-light" routerLink="/">Home</a></li>
         <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="servicos">Serviços</a></li>
-        <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="galeria">Galeria</a></li>
         <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="galeria">Galeria</a></li>
         <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="contato">Contato</a></li>
 
       </ul>
       <div class="ms-lg-3 mt-3 mt-lg-0">
-        <a href="https://wa.me/5511984109502?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="btn btn-danger btn-lg px-4">
+        <a routerLink="/orcamento" class="btn btn-header-orcamento btn-lg px-4">
           <i class="bi bi-whatsapp me-2"></i>
           Solicite um orçamento
         </a>

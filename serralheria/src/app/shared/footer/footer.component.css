@@ -1,69 +1,30 @@
-/* Cor dos links igual ao header, visível em todos os estados */
-.nav-link {
-  color: #BDBDBD !important;
+footer {
+  background: linear-gradient(180deg, var(--dl-black-850) 0%, var(--dl-black-900) 100%) !important;
+  border-top: 1px solid var(--dl-border-light);
+  color: #D8CCBE;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #FFFFFF !important;
-}
-/* Cor dos links igual ao header */
-.nav-link {
-  color: #BDBDBD !important;
-}
-.footer {
-  background-color: #333333; 
-  color: #FFFFFF; /* branco */
-  font-size: 0.95rem;
+footer h5,
+footer .fw-bold {
+  color: #D8CCBE;
 }
 
-/* Logo à esquerda, links ao lado */
-/* Footer institucional, discreto */
-.footer-logo {
-  height: 36px;
-  width: auto;
-}
-
-.footer-brand {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #BDBDBD;
-}
-
-.footer-links {
-  display: flex;
-  gap: 18px;
+footer p,
+footer li {
+  color: #D8CCBE;
 }
 
 .footer-link {
-  color: #BDBDBD !important;
+  color: #D8CCBE !important;
   text-decoration: none;
-  font-weight: 400;
-  font-size: 0.98rem;
-  transition: color 0.2s;
-  cursor: pointer;
-}
-.footer-link:hover,
-.footer-link:focus {
-  color: #FFFFFF !important;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-/* Links do footer sempre visíveis em cinza claro */
-.footer-link {
-  color: #BDBDBD !important;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color var(--dl-transition-fast);
 }
 
 .footer-link:hover,
 .footer-link:focus {
-  color: #FFFFFF !important;
-  text-decoration: underline;
+  color: var(--dl-gold-500) !important;
+}
+
+footer .border-top {
+  border-color: rgba(243, 156, 18, 0.35) !important;
 }
