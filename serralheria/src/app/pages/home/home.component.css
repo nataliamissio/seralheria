@@ -78,6 +78,44 @@
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
+.mapa-wrapper {
+	position: relative;
+	overflow: hidden;
+	border-radius: 14px;
+	box-shadow: var(--dl-shadow-soft);
+}
+
+.mapa-overlay-link {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding: 1rem;
+	text-decoration: none;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.35) 100%);
+	color: var(--dl-white);
+	transition: background-color var(--dl-transition-fast);
+	z-index: 1;
+	cursor: pointer;
+}
+
+.mapa-overlay-link span {
+	padding: 0.55rem 0.9rem;
+	border-radius: 999px;
+	background: rgba(13, 13, 13, 0.78);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	font-size: 0.95rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+.mapa-overlay-link:hover,
+.mapa-overlay-link:focus-visible {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 45%, rgba(0, 0, 0, 0.48) 100%);
+	color: var(--dl-white);
+}
+
 .service-card,
 .benefit-card {
 	transition: none;
