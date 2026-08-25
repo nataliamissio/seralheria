@@ -1,0 +1,11 @@
+.app-main {
+	margin-top: 90px;
+}
+
+@media (max-width: 991.98px) {
+	.app-main {
+		margin-top: 82px;
+		padding-left: 0.9rem;
+		padding-right: 0.9rem;
+	}
+}

@@ -1,0 +1,18 @@
+{
+  "name": "D Lima Estruturas Metálicas",
+  "short_name": "D Lima",
+  "description": "Estruturas metálicas, mezaninos, escadas, grades e portões automáticos em São Paulo.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/assets/favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

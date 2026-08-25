@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-header">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/img/logo.svg" width="250" height="86" decoding="async" fetchpriority="high" alt="Logotipo da D Lima Estruturas Metálicas" class="img-fluid rounded d-inline-block align-text-top nav-logo">
+    </a>
+    <button class="navbar-toggler" type="button" aria-label="Abrir menu" aria-controls="navbarNav" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-light" routerLink="/" (click)="closeMenu()">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="servicos" (click)="closeMenu()">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="sobre" (click)="closeMenu()">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="galeria" (click)="closeMenu()">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link text-light" routerLink="/" fragment="contato" (click)="closeMenu()">Contato</a></li>
+
+      </ul>
+      <div class="ms-lg-3 mt-3 mt-lg-0">
+        <a href="https://wa.me/5511984109502?text=Ol%C3%A1!%20Me%20chamo%20%5BSeu%20Nome%5D%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20DLima%20Estruturas%20Met%C3%A1licas.%20Poderia%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" class="btn btn-header-orcamento btn-lg px-4" (click)="closeMenu()">
+          <i class="bi bi-whatsapp me-2"></i>
+          Solicite um orçamento
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

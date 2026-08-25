@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Bloqueia rastreio de parametros de campanha para evitar indexacao duplicada
+Disallow: /*?utm_
+Disallow: /*&utm_
+
+Sitemap: https://www.dlimaestruturasmetalicas.com.br/sitemap.xml
