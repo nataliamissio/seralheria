@@ -91,6 +91,32 @@
 	outline-offset: 2px;
 }
 
+#galeriaModal .carousel-modal-img {
+	max-width: 100%;
+	max-height: 80vh;
+	object-fit: contain;
+	background: #222;
+}
+
+#galeriaModal .carousel-control-prev,
+#galeriaModal .carousel-control-next {
+	width: 12%;
+}
+
+#galeriaModal .carousel-control-prev-icon,
+#galeriaModal .carousel-control-next-icon {
+	background-color: rgba(13, 13, 13, 0.55);
+	border-radius: 999px;
+	padding: 1.1rem;
+	background-size: 58% 58%;
+}
+
+#galeriaModal .carousel-indicators [data-bs-target] {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
 .mapa-wrapper {
 	position: relative;
 	overflow: hidden;
@@ -177,6 +203,11 @@
 
 	#galeria .galeria-img {
 		height: 130px !important;
+	}
+
+	#galeriaModal .carousel-control-prev,
+	#galeriaModal .carousel-control-next {
+		width: 16%;
 	}
 
 	#contato .col-lg-6.mb-4 {

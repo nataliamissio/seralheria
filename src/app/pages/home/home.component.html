@@ -218,8 +218,30 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            <!-- A imagem ampliada será exibida aqui pelo Bootstrap -->
-            <img id="modalGaleriaImg" [src]="modalGaleriaSrc" [alt]="modalGaleriaAlt" width="1200" height="900" loading="lazy" decoding="async" class="img-fluid rounded shadow" style="max-width:100%; max-height:80vh; object-fit:contain; background:#222;">
+            <div id="galeriaCarousel" class="carousel slide" data-bs-touch="true" data-bs-interval="false">
+              <div class="carousel-inner">
+                @for (image of galleryImages; track image.src; let i = $index) {
+                <div class="carousel-item" [class.active]="i === selectedGalleryIndex">
+                  <img [src]="image.src" [alt]="image.alt" width="1200" height="900" loading="lazy" decoding="async" class="img-fluid rounded shadow carousel-modal-img">
+                </div>
+                }
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Imagem anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próxima imagem</span>
+              </button>
+
+              <div class="carousel-indicators position-static mt-3 mb-0">
+                @for (image of galleryImages; track image.src; let i = $index) {
+                <button type="button" data-bs-target="#galeriaCarousel" [attr.data-bs-slide-to]="i" [class.active]="i === selectedGalleryIndex" [attr.aria-label]="'Ir para imagem ' + (i + 1)" (click)="selecionarImagem(i)"></button>
+                }
+              </div>
+            </div>
           </div>
         </div>
       </div>
