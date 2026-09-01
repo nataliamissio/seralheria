@@ -27,12 +27,7 @@
   <link rel="alternate icon" type="image/x-icon" href="/assets/favicon.ico?v=4">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-  <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
-  <link rel="preconnect" href="https://www.google.com" crossorigin>
-  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.google.com">
-  <link rel="dns-prefetch" href="https://www.gstatic.com">
-  <link rel="preload" as="image" href="/assets/img/serralheria.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/img/serralheria-600.webp" imagesrcset="/assets/img/serralheria-320.webp 320w, /assets/img/serralheria-600.webp 600w" imagesizes="(max-width: 767px) min(92vw, 320px), (max-width: 991px) 50vw, 460px" fetchpriority="high">
 
   <script type="application/ld+json" id="jsonld-default">
     {
@@ -55,19 +50,27 @@
     gtag('config', 'AW-17482997857');
   </script>
   <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1462272018137320');
-    fbq('track', 'PageView');
+    function loadMetaPixel() {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1462272018137320');
+      fbq('track', 'PageView');
+    }
+
+    window.addEventListener('load', function () {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(loadMetaPixel, { timeout: 2000 });
+      } else {
+        setTimeout(loadMetaPixel, 0);
+      }
+    }, { once: true });
   </script>
   <!-- End Meta Pixel Code -->
 </head>

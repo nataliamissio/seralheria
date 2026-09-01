@@ -14,6 +14,12 @@
 	--dl-transition-smooth: 0.3s cubic-bezier(.4,0,.2,1);
 }
 
+@font-face {
+	font-family: "bootstrap-icons";
+	font-display: swap;
+	src: url("../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2");
+}
+
 html {
 	font-size: 100%;
 }

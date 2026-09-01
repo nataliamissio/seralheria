@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row align-items-center gy-4">
       <div class="col-md-6 text-center text-md-start">
-        <img src="assets/img/serralheria.webp" width="920" height="600" fetchpriority="high" decoding="async" alt="Equipe da D Lima trabalhando em estrutura metálica" class="img-fluid rounded shadow-sm home-hero-img">
+        <img src="assets/img/serralheria-600.webp" srcset="assets/img/serralheria-320.webp 320w, assets/img/serralheria-600.webp 600w" sizes="(max-width: 767px) min(92vw, 320px), (max-width: 991px) 50vw, 460px" width="600" height="400" fetchpriority="high" decoding="async" alt="Equipe da D Lima trabalhando em estrutura metálica" class="img-fluid rounded shadow-sm home-hero-img">
       </div>
       <div class="col-md-6 d-flex align-items-center">
         <div class="home-hero-copy">
@@ -174,7 +174,7 @@
     <div class="row row-cols-md-3 row-cols-lg-4 g-3 d-none d-md-flex">
       @for (image of galleryImages; track image.src) {
       <div class="col">
-        <img [src]="image.src" [alt]="image.alt" width="800" height="600" loading="lazy" decoding="async" class="img-fluid rounded border galeria-img" role="button" tabindex="0" (click)="abrirModalGaleria(image.src, image.alt)" (keydown.enter)="abrirModalGaleria(image.src, image.alt)" (keydown.space)="abrirModalGaleria(image.src, image.alt)">
+        <img [src]="image.src" [srcset]="image.srcset" sizes="(max-width: 1199px) 30vw, 276px" [alt]="image.alt" width="640" height="480" loading="lazy" decoding="async" class="img-fluid rounded border galeria-img" role="button" tabindex="0" (click)="abrirModalGaleria(image.src, image.alt)" (keydown.enter)="abrirModalGaleria(image.src, image.alt)" (keydown.space)="abrirModalGaleria(image.src, image.alt)">
       </div>
       }
     </div>
@@ -183,7 +183,7 @@
       <div class="carousel-inner">
         @for (image of galleryImages; track image.src; let i = $index) {
         <div class="carousel-item" [class.active]="i === 0">
-          <img [src]="image.src" [alt]="image.alt" width="800" height="600" loading="lazy" decoding="async" class="d-block w-100 rounded galeria-mobile-img" role="button" tabindex="0" (click)="abrirModalGaleria(image.src, image.alt)" (keydown.enter)="abrirModalGaleria(image.src, image.alt)" (keydown.space)="abrirModalGaleria(image.src, image.alt)">
+          <img [src]="image.src" [srcset]="image.srcset" sizes="calc(100vw - 30px)" [alt]="image.alt" width="640" height="480" loading="lazy" decoding="async" class="d-block w-100 rounded galeria-mobile-img" role="button" tabindex="0" (click)="abrirModalGaleria(image.src, image.alt)" (keydown.enter)="abrirModalGaleria(image.src, image.alt)" (keydown.space)="abrirModalGaleria(image.src, image.alt)">
         </div>
         }
       </div>
