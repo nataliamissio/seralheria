@@ -30,7 +30,7 @@
 	font-weight: 700;
 	line-height: 1.2;
 	letter-spacing: 0.01em;
-	color: #ffffff;
+	color: #D8CFC2;
 }
 
 .home-dark-body {
@@ -73,10 +73,28 @@
 #vantagens .card {
 	border-color: var(--dl-border-soft) !important;
 	box-shadow: var(--dl-shadow-soft) !important;
-	border-radius: 14px;
+	border-radius: 8px;
+}
+
+.services-grid,
+.benefits-grid {
+	display: grid;
+	gap: 1rem;
+}
+
+.services-grid {
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.benefits-grid {
+	grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 #galeria .galeria-img {
+	height: 180px;
+	width: 100%;
+	object-fit: cover;
+	cursor: pointer;
 	border-color: var(--dl-border-soft) !important;
 	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
 	transition: box-shadow var(--dl-transition-fast);
@@ -89,6 +107,37 @@
 #galeria .galeria-img:focus-visible {
 	outline: 3px solid #f39c12;
 	outline-offset: 2px;
+}
+
+.galeria-mobile-carousel {
+	padding-bottom: 0.25rem;
+}
+
+.galeria-mobile-img {
+	height: min(68vw, 360px);
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.galeria-mobile-carousel .carousel-control-prev,
+.galeria-mobile-carousel .carousel-control-next {
+	width: 14%;
+}
+
+.galeria-mobile-carousel .carousel-control-prev-icon,
+.galeria-mobile-carousel .carousel-control-next-icon {
+	background-color: rgba(13, 13, 13, 0.68);
+	border-radius: 50%;
+	background-size: 55% 55%;
+	padding: 1.15rem;
+}
+
+.galeria-mobile-carousel .carousel-indicators [data-bs-target] {
+	width: 8px;
+	height: 8px;
+	border: 0;
+	border-radius: 50%;
+	background-color: #6c757d;
 }
 
 #galeriaModal .carousel-modal-img {
@@ -164,7 +213,32 @@
 
 #servicos .card-body,
 #vantagens .card-body {
-	padding: 1.1rem;
+	padding: 0.9rem;
+}
+
+#servicos .service-card,
+#vantagens .benefit-card {
+	min-height: 150px;
+}
+
+#vantagens .benefit-card {
+	padding: 0.9rem !important;
+}
+
+#servicos .card-title,
+#vantagens .card-title {
+	font-size: 1rem;
+}
+
+#servicos .card-text {
+	font-size: 0.9rem;
+	line-height: 1.45;
+}
+
+#servicos .service-card i.bi,
+#vantagens .benefit-card i.bi {
+	font-size: 1.75rem !important;
+	margin-bottom: 0.65rem !important;
 }
 
 #contato .d-flex.align-items-start {
@@ -184,13 +258,135 @@
 	transform: none;
 }
 
+@media (max-width: 991.98px) {
+	.services-grid,
+	.benefits-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
 @media (max-width: 767.98px) {
 	#servicos,
 	#vantagens,
+	#sobre,
 	#galeria,
 	#contato {
 		padding-top: 2.1rem !important;
 		padding-bottom: 2.1rem !important;
+	}
+
+	#sobre .home-dark-title {
+		font-size: 1.4rem;
+		margin-bottom: 1rem !important;
+	}
+
+	#sobre .home-dark-divider {
+		margin-bottom: 1.25rem !important;
+	}
+
+	#sobre .row {
+		--bs-gutter-y: 1rem;
+	}
+
+	#sobre .home-dark-body {
+		font-size: 0.92rem;
+		line-height: 1.55;
+	}
+
+	#sobre .home-dark-body.mb-4 {
+		margin-bottom: 0.85rem !important;
+	}
+
+	#sobre img {
+		max-width: 180px !important;
+	}
+
+	.services-grid,
+	.benefits-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.75rem;
+	}
+
+	#vantagens h2 {
+		font-size: 1.35rem;
+		margin-bottom: 1.5rem !important;
+	}
+
+	#servicos .service-card,
+	#vantagens .benefit-card {
+		min-height: 130px;
+	}
+
+	#servicos .card-body,
+	#vantagens .card-body {
+		padding: 0.7rem;
+	}
+
+	#vantagens .benefit-card {
+		padding: 0.7rem !important;
+	}
+
+	#servicos .card-title,
+	#vantagens .card-title {
+		font-size: 0.9rem;
+	}
+
+	#servicos .card-text {
+		font-size: 0.8rem;
+		line-height: 1.35;
+	}
+
+	#contato .container {
+		padding-top: 2rem !important;
+		padding-bottom: 2rem !important;
+	}
+
+	#contato .titulo-destaque-home {
+		font-size: 0.76rem;
+	}
+
+	#contato h2 {
+		font-size: 1.4rem;
+		margin-bottom: 1.25rem !important;
+	}
+
+	#contato h3 {
+		font-size: 0.92rem !important;
+	}
+
+	#contato .row.gy-4 {
+		--bs-gutter-y: 0.85rem;
+	}
+
+	#contato .d-flex.align-items-start {
+		gap: 0;
+	}
+
+	#contato .d-flex.align-items-start > i {
+		flex: 0 0 1.5rem;
+		font-size: 1.25rem !important;
+		margin-right: 0.65rem !important;
+	}
+
+	#contato .d-flex.align-items-start a {
+		display: inline-block;
+		font-size: 0.88rem;
+		line-height: 1.4;
+		overflow-wrap: anywhere;
+	}
+
+	#contato .mapa-wrapper {
+		--bs-aspect-ratio: 62.5%;
+		border-radius: 8px;
+	}
+
+	#contato .mapa-overlay-link {
+		padding: 0.65rem;
+	}
+
+	#contato .mapa-overlay-link span {
+		padding: 0.45rem 0.7rem;
+		font-size: 0.78rem;
 	}
 
 	.home-hero-img {
@@ -201,10 +397,6 @@
 		margin-inline: auto;
 	}
 
-	#galeria .galeria-img {
-		height: 130px !important;
-	}
-
 	#galeriaModal .carousel-control-prev,
 	#galeriaModal .carousel-control-next {
 		width: 16%;
@@ -212,10 +404,6 @@
 
 	#contato .col-lg-6.mb-4 {
 		margin-bottom: 1.1rem !important;
-	}
-
-	.home-dark-title {
-		font-size: 1.7rem;
 	}
 
 	.home-main-title {

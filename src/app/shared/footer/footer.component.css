@@ -32,17 +32,56 @@ footer .border-top {
 @media (max-width: 767.98px) {
   footer {
     text-align: center;
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
   }
 
   footer img {
-    width: 210px !important;
+    width: 160px !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  footer .col-md-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  footer h5 {
+    margin-bottom: 0.45rem;
+    font-size: 0.95rem;
+  }
+
+  footer p,
+  footer li,
+  footer .footer-link {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  footer li + li {
+    margin-top: 0.22rem;
   }
 
   footer .d-flex.gap-3 {
     justify-content: center;
+    gap: 0.9rem !important;
+    margin-top: 0.6rem;
+  }
+
+  footer .d-flex.gap-3 .footer-link {
+    font-size: 1.25rem !important;
   }
 
   footer .list-unstyled {
     margin-bottom: 0;
+  }
+
+  footer .border-top {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+  }
+
+  footer .border-top p {
+    font-size: 0.75rem;
   }
 }
